@@ -190,6 +190,57 @@ export const caES: Localization = {
   },
 };
 
+export const ckbCKB: Localization = {
+  
+  props: {
+    MuiBreadcrumbs: {
+      expandText: 'نیشاندانی ڕێڕەو',
+    },
+    MuiTablePagination: {
+      backIconButtonText: 'پەڕەی پێشوو',
+      labelRowsPerPage: 'ڕیزەکان بۆ هەر پەڕەیەک:',
+      labelDisplayedRows: ({ from, to, count }) =>
+  `${from}-${to} لە ${count !== -1 ? count : `زیاتر لە ${to}`}`,
+      nextIconButtonText: 'پەڕەی دواتر',
+    },
+    MuiRating: {
+      getLabelText: value => `${value} Star${value !== 1 ? 's' : ''}`,
+      emptyLabelText: 'بەتاڵ',
+    },
+    MuiAutocomplete: {
+      clearText: 'سڕینەوە',
+      closeText: 'داخستن',
+      loadingText: 'Loading…',
+      noOptionsText: 'هیچ هەڵبژاردنێک',
+      openText: 'کردنەوە',
+    },
+    MuiAlert: {
+      closeText: 'داخستن',
+    },
+    MuiPagination: {
+      'aria-label': 'ڕێنیشاندەری پەڕەگۆڕکێ',
+      getItemAriaLabel: (type, page, selected) => {
+        if (type === 'page') {
+          return `${selected ? '' : 'بڕۆ بۆ '}page ${page}`;
+        }
+        if (type === 'first') {
+          return 'بڕۆ بۆ پەڕەی یەکەم';
+        }
+        if (type === 'last') {
+          return 'بڕۆ بۆ کۆتا پەڕە';
+        }
+        if (type === 'next') {
+          return 'بڕۆ بۆ پەڕەی دواتر';
+        }
+        if (type === 'previous') {
+          return 'بڕۆ بۆ پەڕەی پێشوو';
+        }
+        return undefined;
+      },
+    },
+  },
+};
+
 export const csCZ: Localization = {
   props: {
     MuiBreadcrumbs: {
